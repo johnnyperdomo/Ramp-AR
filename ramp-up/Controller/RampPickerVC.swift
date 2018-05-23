@@ -45,30 +45,19 @@ class RampPickerVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         sceneView.addGestureRecognizer(tap)
         
-        let rotate = SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: CGFloat(0.01 * Double.pi), z: 0, duration: 0.1)) //to rotate
         
+        let pipe = Ramp.getPipe()
+        Ramp.startRotation(node: pipe)
+        scene.rootNode.addChildNode(pipe)
         
-        let pipeObj = SCNScene(named: "art.scnassets/pipe.dae")  //pipe scene
-        let pipeNode = pipeObj?.rootNode.childNode(withName: "pipe", recursively: true)! //calls the specific object in the scene(node)..calls it by identifier
-        pipeNode?.runAction(rotate) //rotates the node image
-        pipeNode?.scale = SCNVector3Make( 0.0025, 0.0025,0.0025) //change the scale size of the ramp
-        pipeNode?.position = SCNVector3Make(-1, 0.7, -1)
-        scene.rootNode.addChildNode(pipeNode!) //add the node to this scene
+        let pyramid = Ramp.getPyramid()
+        Ramp.startRotation(node: pyramid)
+        scene.rootNode.addChildNode(pyramid)
         
+        let quarter = Ramp.getQuarter()
+        Ramp.startRotation(node: quarter)
+        scene.rootNode.addChildNode(quarter)
         
-        let pyramidObj = SCNScene(named: "art.scnassets/pyramid.dae") //pyramid scene
-        let pyramidNode = pyramidObj?.rootNode.childNode(withName: "pyramid", recursively: true)!
-        pyramidNode?.runAction(rotate)
-        pyramidNode?.scale = SCNVector3Make(0.006, 0.006, 0.006)
-        pyramidNode?.position = SCNVector3Make(-1, -0.3, -1)
-        scene.rootNode.addChildNode(pyramidNode!) //add the node to scene
-        
-        let quarterObj = SCNScene(named: "art.scnassets/quarter.dae") //quarterPipe scene
-        let quarterNode = quarterObj?.rootNode.childNode(withName: "quarter", recursively: true)!
-        quarterNode?.runAction(rotate)
-        quarterNode?.scale = SCNVector3Make(0.006, 0.006, 0.006)
-        quarterNode?.position = SCNVector3Make(-1, -2, -1)
-        scene.rootNode.addChildNode(quarterNode!)
         
     }
 

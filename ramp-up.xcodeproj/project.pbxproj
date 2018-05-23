@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE436A9F20B5F78400F65E82 /* Ramp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE436A9E20B5F78400F65E82 /* Ramp.swift */; };
 		FEAE485B20977EE500BA6ED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE485A20977EE500BA6ED8 /* AppDelegate.swift */; };
 		FEAE485D20977EE500BA6ED8 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FEAE485C20977EE500BA6ED8 /* art.scnassets */; };
 		FEAE485F20977EE500BA6ED8 /* RampPlacerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE485E20977EE500BA6ED8 /* RampPlacerVC.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE436A9E20B5F78400F65E82 /* Ramp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ramp.swift; sourceTree = "<group>"; };
 		FEAE485720977EE500BA6ED8 /* ramp-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ramp-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAE485A20977EE500BA6ED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEAE485C20977EE500BA6ED8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE436A9D20B5F77300F65E82 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE436A9E20B5F78400F65E82 /* Ramp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FEAE484E20977EE500BA6ED8 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		FEAE485920977EE500BA6ED8 /* ramp-up */ = {
 			isa = PBXGroup;
 			children = (
+				FE436A9D20B5F77300F65E82 /* Model */,
 				FEAE486E2097817F00BA6ED8 /* Controller */,
 				FEAE485A20977EE500BA6ED8 /* AppDelegate.swift */,
 				FEAE485C20977EE500BA6ED8 /* art.scnassets */,
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEAE485F20977EE500BA6ED8 /* RampPlacerVC.swift in Sources */,
+				FE436A9F20B5F78400F65E82 /* Ramp.swift in Sources */,
 				FEAE48702097944500BA6ED8 /* RampPickerVC.swift in Sources */,
 				FEAE485B20977EE500BA6ED8 /* AppDelegate.swift in Sources */,
 			);
